@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ana Kovač — Istraživanje</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.meta-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:3rem}
+.meta-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1.25rem}
+.meta-box .ml{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.meta-box .mv{font-size:15px;font-weight:500;color:var(--text)}
+.abstract{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;margin-bottom:2.5rem;border-left:3px solid var(--accent)}
+.abstract p{font-size:15px;color:var(--muted);line-height:1.8}
+.conclusion-list{display:flex;flex-direction:column;gap:0.75rem;margin-top:1rem}
+.cl-item{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm)}
+.cl-num{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:var(--accent);min-width:24px;flex-shrink:0}
+.cl-text{font-size:14px;color:var(--muted);line-height:1.6}
+@media(max-width:680px){.meta-row{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="nav-brand" href="index.html"><span class="nav-dot"></span>Ana Kovač</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Početna</a></li>
+    <li><a href="predmeti.html">Predmeti</a></li>
+    <li><a href="sjwp.html">SJWP</a></li>
+    <li><a href="radovi.html">Radovi</a></li>
+    <li><a href="certifikati.html">Certifikati</a></li>
+    <li><a href="istrazivanje.html" class="active">Istraživanje</a></li>
+  </ul>
+</nav>
+<div class="pw-full">
+  <div class="ph">
+    <div class="eyebrow"><span class="eline"></span>Vježba LV12 · Istraživanje</div>
+    <h1 class="page-title">Utjecaj pametnih telefona na koncentraciju učenika</h1>
+    <p class="pdesc">Istraživanje provedeno u okviru predmeta SJWP — anketno ispitivanje s 78 učenika Tehničke škole Zagreb.</p>
+  </div>
+  <div class="meta-row">
+    <div class="meta-box"><div class="ml">Autorica</div><div class="mv">Ana Kovač, 3.b</div></div>
+    <div class="meta-box"><div class="ml">Mentorica</div><div class="mv">Prof. Ivana Perić</div></div>
+    <div class="meta-box"><div class="ml">Datum</div><div class="mv">Siječanj 2025.</div></div>
+    <div class="meta-box"><div class="ml">Uzorak</div><div class="mv">78 učenika</div></div>
+  </div>
+  <h2 class="st">Sažetak</h2>
+  <div class="abstract"><p>Cilj ovog istraživanja bio je utvrditi postoji li statistički značajna veza između dnevnog vremena provedenog na pametnom telefonu i školskog uspjeha, kao i poteškoća s koncentracijom na nastavi. Istraživanje je provedeno anonimnom anketom na uzorku od 78 učenika prvog do četvrtog razreda Tehničke škole Zagreb. Rezultati pokazuju jasnu negativnu korelaciju — što više sati dnevno učenik koristi mobitel, to su lošije prosječne ocjene i veće poteškoće s pažnjom.</p></div>
+  <h2 class="st">Podaci po skupinama</h2>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:2rem">
+    <table class="dt">
+      <thead><tr><th>Dnevno korištenje</th><th>Broj učenika</th><th>Prosječna ocjena</th><th>Poteškoće s pažnjom</th></tr></thead>
+      <tbody>
+        <tr><td>Manje od 2 sata</td><td>18</td><td style="color:#3ECFB2;font-weight:600">4.6</td><td>23%</td></tr>
+        <tr><td>2–4 sata</td><td>31</td><td style="color:#E5687A;font-weight:600">4.1</td><td>45%</td></tr>
+        <tr><td>4–6 sati</td><td>21</td><td style="color:#F0B830;font-weight:600">3.7</td><td>62%</td></tr>
+        <tr><td>Više od 6 sati</td><td>8</td><td style="color:#F08080;font-weight:600">3.1</td><td>88%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h2 class="st">Poteškoće s pažnjom po skupinama</h2>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:2rem">
+    <div class="bar-row"><div class="bar-label">Do 2 sata/dan</div><div class="bar-bg"><div class="bar-fill" style="width:23%"></div></div><div class="bar-val">23%</div></div>
+    <div class="bar-row"><div class="bar-label">2–4 sata/dan</div><div class="bar-bg"><div class="bar-fill" style="width:45%"></div></div><div class="bar-val">45%</div></div>
+    <div class="bar-row"><div class="bar-label">4–6 sati/dan</div><div class="bar-bg"><div class="bar-fill" style="width:62%"></div></div><div class="bar-val">62%</div></div>
+    <div class="bar-row"><div class="bar-label">Više od 6 sati</div><div class="bar-bg"><div class="bar-fill" style="width:88%;background:#8B0000"></div></div><div class="bar-val">88%</div></div>
+  </div>
+  <div class="divider"></div>
+  <h2 class="st">Zaključci</h2>
+  <div class="conclusion-list">
+    <div class="cl-item"><div class="cl-num">01</div><div class="cl-text">Postoji jasna negativna korelacija između dnevnog korištenja pametnog telefona i školskog uspjeha mjerenog prosječnom ocjenom.</div></div>
+    <div class="cl-item"><div class="cl-num">02</div><div class="cl-text">Učenici koji koriste mobitel više od 4 sata dnevno značajno češće prijavljuju poteškoće s pažnjom i koncentracijom na nastavi.</div></div>
+    <div class="cl-item"><div class="cl-num">03</div><div class="cl-text">Roditeljski nadzor i postavljanje vremenskih ograničenja koreliraju s boljim školskim rezultatima i manjim brojem izostanaka.</div></div>
+    <div class="cl-item"><div class="cl-num">04</div><div class="cl-text">Preporučuje se uvođenje strukturiranih digitalnih pauza i svjesnog korištenja ekrana, posebice u večernjim satima.</div></div>
+    <div class="cl-item"><div class="cl-num">05</div><div class="cl-text">Buduća istraživanja trebaju uključiti i praćenje vrste sadržaja (edukativni vs. zabavni) kako bi se preciznije izmjerio utjecaj.</div></div>
+  </div>
+  <a class="dl-btn" href="#">↓ Preuzmi cijeli rad (PDF)</a>
+</div>
+<footer><p>Ana Kovač · Tehnička škola Zagreb · 2024./2025. · <a href="sjwp.html">SJWP</a></p></footer>
+</body>
+</html>

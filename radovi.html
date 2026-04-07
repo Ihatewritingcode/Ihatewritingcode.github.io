@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ana Kovač — Radovi</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.rad-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;margin-bottom:1rem;display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:start;transition:border-color 0.2s}
+.rad-card:hover{border-color:var(--border2)}
+.rad-card h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:0.5rem;letter-spacing:-0.3px}
+.rad-card p{font-size:14px;color:var(--muted);line-height:1.65}
+.rad-meta{display:flex;gap:0.75rem;margin-top:0.75rem;flex-wrap:wrap}
+.meta-chip{font-size:12px;color:var(--muted);background:var(--surface2);padding:3px 10px;border-radius:6px}
+.dl-btn-sm{display:inline-flex;align-items:center;gap:6px;background:var(--surface2);border:1px solid var(--border);color:var(--text);font-size:13px;font-weight:500;padding:8px 16px;border-radius:8px;text-decoration:none;white-space:nowrap;transition:all 0.2s;flex-shrink:0}
+.dl-btn-sm:hover{border-color:var(--accent);color:var(--accent)}
+@media(max-width:680px){.rad-card{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="nav-brand" href="index.html"><span class="nav-dot"></span>Ana Kovač</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Početna</a></li>
+    <li><a href="predmeti.html">Predmeti</a></li>
+    <li><a href="sjwp.html">SJWP</a></li>
+    <li><a href="radovi.html" class="active">Radovi</a></li>
+    <li><a href="certifikati.html">Certifikati</a></li>
+    <li><a href="istrazivanje.html">Istraživanje</a></li>
+  </ul>
+</nav>
+<div class="pw-full">
+  <div class="ph">
+    <div class="eyebrow"><span class="eline"></span>Akademski radovi</div>
+    <h1 class="page-title">Radovi i eseji</h1>
+    <p class="pdesc">Seminarski radovi, eseji i prezentacije izrađeni za školske predmete — za preuzimanje i pregled.</p>
+  </div>
+  <div class="filters">
+    <button class="filter-btn on" onclick="filter(this,'sve')">Sve</button>
+    <button class="filter-btn" onclick="filter(this,'sem')">Seminarski</button>
+    <button class="filter-btn" onclick="filter(this,'esej')">Eseji</button>
+    <button class="filter-btn" onclick="filter(this,'prez')">Prezentacije</button>
+    <button class="filter-btn" onclick="filter(this,'ist')">Istraživanje</button>
+  </div>
+  <div id="radovi-list">
+    <div class="rad-card" data-type="sem">
+      <div><span class="tag tag-red">Informatika · Seminarski rad</span><h3>Kibernetička sigurnost za mlade</h3><p>Phishing napadi, metode zaštite lozinki i dvofaktorska autentifikacija. Rad uključuje anketu na 60 učenika i preporuke za digitalnu higijenu.</p><div class="rad-meta"><span class="meta-chip">Informatika</span><span class="meta-chip">Siječanj 2025.</span><span class="meta-chip">18 stranica</span></div></div>
+      <a class="dl-btn-sm" href="#">↓ PDF</a>
+    </div>
+    <div class="rad-card" data-type="esej">
+      <div><span class="tag tag-teal">Biologija · Esej</span><h3>Klimatske promjene i migracije ptica</h3><p>Esej o utjecaju klimatskih promjena na migracije i gnijezdenje ptica u Hrvatskoj. Nagrađen trećim mjestom na školskom natjecanju.</p><div class="rad-meta"><span class="meta-chip">Biologija</span><span class="meta-chip">Studeni 2024.</span><span class="meta-chip">🏅 Nagrađen</span></div></div>
+      <a class="dl-btn-sm" href="#">↓ PDF</a>
+    </div>
+    <div class="rad-card" data-type="prez">
+      <div><span class="tag tag-amber">Matematika · Prezentacija</span><h3>Primjena statistike u biologiji</h3><p>Prezentacija (22 slajda) o primjeni deskriptivne i inferencijalne statistike u biološkim istraživanjima — od Mendelovih pokusa do epidemioloških studija.</p><div class="rad-meta"><span class="meta-chip">Matematika</span><span class="meta-chip">Listopad 2024.</span><span class="meta-chip">22 slajda</span></div></div>
+      <a class="dl-btn-sm" href="#">↓ PPTX</a>
+    </div>
+    <div class="rad-card" data-type="ist">
+      <div><span class="tag tag-red">SJWP · Istraživanje LV12</span><h3>Utjecaj pametnih telefona na koncentraciju učenika</h3><p>Anketno istraživanje na uzorku od 78 učenika. Obrađeni podaci pokazuju negativnu korelaciju između ekranskog vremena i školskog uspjeha.</p><div class="rad-meta"><span class="meta-chip">SJWP</span><span class="meta-chip">Siječanj 2025.</span><span class="meta-chip">78 ispitanika</span></div></div>
+      <a class="dl-btn-sm" href="istrazivanje.html">→ Pogledaj</a>
+    </div>
+    <div class="rad-card" data-type="sem">
+      <div><span class="tag tag-teal">Biologija · Seminarski rad</span><h3>Bioraznolikost Plitvičkih jezera</h3><p>Analiza ekosustava Plitvičkih jezera — endemske vrste, travertinska barijera, utjecaj turizma i zaštita UNESCO lokaliteta. Terenski posjet s fotografijama.</p><div class="rad-meta"><span class="meta-chip">Biologija</span><span class="meta-chip">Travanj 2024.</span><span class="meta-chip">14 stranica</span></div></div>
+      <a class="dl-btn-sm" href="#">↓ PDF</a>
+    </div>
+  </div>
+</div>
+<footer><p>Ana Kovač · Tehnička škola Zagreb · 2024./2025. · <a href="sjwp.html">SJWP</a></p></footer>
+<script>
+function filter(btn,type){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');document.querySelectorAll('.rad-card').forEach(c=>{c.style.display=(type==='sve'||c.dataset.type===type)?'':'none'})}
+</script>
+</body>
+</html>

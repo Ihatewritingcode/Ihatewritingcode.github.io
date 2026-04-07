@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ana Kovač — Predmeti</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1rem;transition:border-color 0.2s}
+.card:hover{border-color:var(--border2)}
+.card h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:0.5rem;letter-spacing:-0.3px}
+.card p{font-size:14px;color:var(--muted);line-height:1.65}
+.raspored-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{padding:10px 12px;text-align:left;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);background:var(--surface2)}
+td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--text)}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--surface2)}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="nav-brand" href="index.html"><span class="nav-dot"></span>Ana Kovač</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Početna</a></li>
+    <li><a href="predmeti.html" class="active">Predmeti</a></li>
+    <li><a href="sjwp.html">SJWP</a></li>
+    <li><a href="radovi.html">Radovi</a></li>
+    <li><a href="certifikati.html">Certifikati</a></li>
+    <li><a href="istrazivanje.html">Istraživanje</a></li>
+  </ul>
+</nav>
+<div class="pw-full">
+  <div class="ph">
+    <div class="eyebrow"><span class="eline"></span>Školski sadržaji</div>
+    <h1 class="page-title">Predmeti</h1>
+    <p class="pdesc">Bilješke, materijali i objavljeni radovi za tri školska predmeta — informatiku, biologiju i matematiku.</p>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn on" onclick="sw(this,'inf')">💻 Informatika</button>
+    <button class="tab-btn" onclick="sw(this,'bio')">🌿 Biologija</button>
+    <button class="tab-btn" onclick="sw(this,'mat')">📐 Matematika</button>
+  </div>
+  <div id="inf" class="tab-pane on">
+    <div class="card"><span class="tag tag-red">Informatika · Bilješke</span><h3>Baze podataka i SQL</h3><p>Relacijske baze podataka, SQL upiti (SELECT, JOIN, GROUP BY), normalizacija do 3. NF i kreiranje ER dijagrama. Koristimo MySQL Workbench za laboratorijske vježbe.</p></div>
+    <div class="card"><span class="tag tag-red">Informatika · Bilješke</span><h3>Python programiranje</h3><p>Osnove Pythona: varijable, uvjetne naredbe, petlje, funkcije, rad s datotekama i osnove OOP-a. Izradila sam mini projekt — program za evidenciju knjiga u knjižnici.</p></div>
+    <div class="card"><span class="tag tag-red">Informatika · Projekt</span><h3>Web razvoj — HTML, CSS, JavaScript</h3><p>U sklopu SJWP predmeta naučila sam strukturirati web stranice, oblikovati ih CSS-om i dodati interaktivnost JavaScriptom. Svladala sam koncepte responzivnog dizajna.</p></div>
+    <div class="divider"></div>
+    <h2 class="st">Raspored sati</h2>
+    <div class="raspored-wrap" style="margin-bottom:2rem">
+      <table>
+        <thead><tr><th>Sat</th><th>Ponedjeljak</th><th>Utorak</th><th>Srijeda</th><th>Četvrtak</th><th>Petak</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1.</strong></td><td>Matematika</td><td>Informatika</td><td>Engleski</td><td>Biologija</td><td>Fizika</td></tr>
+          <tr><td><strong>2.</strong></td><td>Matematika</td><td>Informatika</td><td>Engleski</td><td>Biologija</td><td>Fizika</td></tr>
+          <tr><td><strong>3.</strong></td><td>Hrvatski</td><td>Fizika</td><td>Matematika</td><td>Informatika</td><td>Tjelesni</td></tr>
+          <tr><td><strong>4.</strong></td><td>Hrvatski</td><td>Fizika</td><td>Matematika</td><td>Informatika</td><td>Tjelesni</td></tr>
+          <tr><td><strong>5.</strong></td><td>Biologija</td><td>Vjeronauk</td><td>SJWP</td><td>Historia</td><td>—</td></tr>
+          <tr><td><strong>6.</strong></td><td>—</td><td>—</td><td>SJWP</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h2 class="st">Tjedne obaveze</h2>
+    <div class="list-card"><span class="ldot"></span>Predati seminarski rad iz biologije</div>
+    <div class="list-card"><span class="ldot"></span>Dovršiti Python projekt — evidencija knjiga</div>
+    <div class="list-card"><span class="ldot"></span>Pripremiti prezentaciju za statistiku</div>
+    <div class="list-card"><span class="ldot"></span>Ažurirati WordPress stranicu (SJWP)</div>
+    <div class="list-card"><span class="ldot"></span>Repetirati SQL za pisani ispit</div>
+    <div class="list-card"><span class="ldot"></span>Volontiranje u knjižnici — subota 10:00</div>
+  </div>
+  <div id="bio" class="tab-pane">
+    <div class="card"><span class="tag tag-teal">Biologija · Bilješke</span><h3>Ekologija i bioraznolikost</h3><p>Ekosustavi, lanci ishrane i prehrambena mreža, utjecaj čovjeka na okoliš i zaštita ugroženih vrsta u Hrvatskoj. Koristimo aplikaciju iNaturalist za terenski rad.</p></div>
+    <div class="card"><span class="tag tag-teal">Biologija · Bilješke</span><h3>Genetika i nasljeđivanje</h3><p>Mendelovi zakoni nasljeđivanja, crossing-over, mutacije i kromosomske aberacije. Primjeri genetskih bolesti i etika genetskog inženjeringa.</p></div>
+    <div class="card"><span class="tag tag-teal">Biologija · Rad</span><h3>Esej: Klimatske promjene i fauna</h3><p>Pisala sam o tome kako klimatske promjene utječu na migracije ptica u Hrvatskoj. Esej je nagrađen na školskom natjecanju — treće mjesto.</p><a class="dl-link" href="#">↓ Preuzmi esej (PDF)</a></div>
+  </div>
+  <div id="mat" class="tab-pane">
+    <div class="card"><span class="tag tag-amber">Matematika · Bilješke</span><h3>Statistika i vjerojatnost</h3><p>Deskriptivna statistika, mjere raspršenosti, normalne razdiobe, kombinatorika i osnove teorije vjerojatnosti. Koristimo GeoGebru za vizualizaciju.</p></div>
+    <div class="card"><span class="tag tag-amber">Matematika · Bilješke</span><h3>Analitička geometrija</h3><p>Koordinatni sustav u ravnini i prostoru, jednadžbe pravca, kružnice i koničnih presjeka. Vektori u ravnini i prostoru, skalarni i vektorski produkt.</p></div>
+    <div class="card"><span class="tag tag-amber">Matematika · Prezentacija</span><h3>Primjena statistike u biologiji</h3><p>Prezentacija o primjeni statistike u biološkim istraživanjima — od Mendelovih pokusa do modernih epidemioloških studija.</p><a class="dl-link" href="#">↓ Preuzmi prezentaciju</a></div>
+  </div>
+</div>
+<footer><p>Ana Kovač · Tehnička škola Zagreb · 2024./2025. · <a href="sjwp.html">SJWP</a></p></footer>
+<script>
+function sw(btn,id){document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('on'));document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('on'));btn.classList.add('on');document.getElementById(id).classList.add('on')}
+</script>
+</body>
+</html>

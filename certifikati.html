@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ana Kovač — Certifikati</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:3rem}
+.cert-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;display:flex;gap:1.25rem;align-items:flex-start;transition:border-color 0.2s;position:relative}
+.cert-card:hover{border-color:var(--border2)}
+.cert-card.featured{border-color:rgba(200,33,58,0.3)}
+.feat-dot{position:absolute;top:14px;right:14px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.cert-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.ic-red{background:rgba(200,33,58,0.12)}
+.ic-amber{background:rgba(240,165,0,0.12)}
+.ic-teal{background:rgba(62,207,178,0.12)}
+.cert-card h4{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:4px;letter-spacing:-0.2px}
+.cert-card .org{font-size:13px;color:var(--muted)}
+.cert-card .date{font-size:12px;color:var(--muted);margin-top:4px}
+.cert-badge{display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:30px;margin-top:6px}
+.cb-red{background:rgba(200,33,58,0.12);color:#E5687A}
+.cb-amber{background:rgba(240,165,0,0.12);color:#F0B830}
+.cb-teal{background:rgba(62,207,178,0.12);color:#3ECFB2}
+.stats-top{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:3rem}
+.stat-c{background:var(--surface);padding:1.5rem;text-align:center}
+.stat-c .n{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent)}
+.stat-c .l{font-size:12px;color:var(--muted);margin-top:4px}
+@media(max-width:680px){.cert-grid{grid-template-columns:1fr}.stats-top{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="nav-brand" href="index.html"><span class="nav-dot"></span>Ana Kovač</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Početna</a></li>
+    <li><a href="predmeti.html">Predmeti</a></li>
+    <li><a href="sjwp.html">SJWP</a></li>
+    <li><a href="radovi.html">Radovi</a></li>
+    <li><a href="certifikati.html" class="active">Certifikati</a></li>
+    <li><a href="istrazivanje.html">Istraživanje</a></li>
+  </ul>
+</nav>
+<div class="pw-full">
+  <div class="ph">
+    <div class="eyebrow"><span class="eline"></span>Izvannastavna postignuća</div>
+    <h1 class="page-title">Certifikati i nagrade</h1>
+    <p class="pdesc">Osobni certifikati, svjedodžbe i diplome vezane uz izvanškolske i izvannastavne aktivnosti i uspjehe.</p>
+  </div>
+  <div class="stats-top">
+    <div class="stat-c"><div class="n">6</div><div class="l">Certifikata</div></div>
+    <div class="stat-c"><div class="n">2</div><div class="l">Natjecanja</div></div>
+    <div class="stat-c"><div class="n">1</div><div class="l">Međunarodni ispit</div></div>
+    <div class="stat-c"><div class="n">100+</div><div class="l">Sati volontiranja</div></div>
+  </div>
+  <h2 class="st">Sva postignuća</h2>
+  <div class="cert-grid">
+    <div class="cert-card featured"><span class="feat-dot"></span><div class="cert-icon ic-amber">🏆</div><div><h4>3. mjesto — natjecanje iz biologije</h4><div class="org">Gradsko natjecanje prirodnih znanosti</div><div class="date">Travanj 2024.</div><span class="cert-badge cb-amber">Nagrada</span></div></div>
+    <div class="cert-card"><div class="cert-icon ic-red">💻</div><div><h4>CS50x — Introduction to Computer Science</h4><div class="org">Harvard University · edX online tečaj</div><div class="date">Lipanj 2024.</div><span class="cert-badge cb-red">Certifikat</span></div></div>
+    <div class="cert-card"><div class="cert-icon ic-amber">🌐</div><div><h4>Cambridge English — B2 First</h4><div class="org">Cambridge Assessment English</div><div class="date">Lipanj 2023.</div><span class="cert-badge cb-amber">Međunarodni certifikat</span></div></div>
+    <div class="cert-card featured"><span class="feat-dot"></span><div class="cert-icon ic-amber">♟️</div><div><h4>2. mjesto — školski šahovski turnir</h4><div class="org">Tehnička škola Zagreb — Šahovski klub</div><div class="date">Prosinac 2023.</div><span class="cert-badge cb-amber">Nagrada</span></div></div>
+    <div class="cert-card"><div class="cert-icon ic-teal">📸</div><div><h4>Fotografski natječaj "Priroda oko nas"</h4><div class="org">Zelena Hrvatska — otkupljena fotografija</div><div class="date">Rujan 2024.</div><span class="cert-badge cb-teal">Odabir žirija</span></div></div>
+    <div class="cert-card"><div class="cert-icon ic-teal">🤝</div><div><h4>Volonterska potvrda — gradska knjižnica</h4><div class="org">Gradska knjižnica Zagreb</div><div class="date">2023./2024. — 100+ sati</div><span class="cert-badge cb-teal">Volontiranje</span></div></div>
+  </div>
+</div>
+<footer><p>Ana Kovač · Tehnička škola Zagreb · 2024./2025. · <a href="sjwp.html">SJWP</a></p></footer>
+</body>
+</html>

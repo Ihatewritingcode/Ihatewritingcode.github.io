@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ana Kovač — Početna</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.hero{padding:6rem 0 5rem;border-bottom:1px solid var(--border)}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,7vw,5rem);font-weight:800;line-height:1.05;letter-spacing:-2px;margin-bottom:1.5rem}
+.hero h1 .dim{color:var(--muted)}.hero h1 .hl{color:var(--accent)}
+.hero-sub{font-size:17px;color:var(--muted);max-width:520px;margin-bottom:2rem;line-height:1.7}
+.hero-pills{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:3rem}
+.pill{background:var(--surface);border:1px solid var(--border);border-radius:30px;padding:7px 16px;font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:8px}
+.pill-dot{width:6px;height:6px;border-radius:50%}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:4rem 0}
+.stat-cell{background:var(--surface);padding:1.75rem 1.5rem}
+.stat-cell .num{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;letter-spacing:-1px;color:var(--text);margin-bottom:4px}
+.stat-cell .num span{color:var(--accent)}
+.stat-cell .lbl{font-size:12px;color:var(--muted);font-weight:500;letter-spacing:0.3px}
+.sec{padding:4rem 0}
+.about-grid{display:grid;grid-template-columns:1fr 300px;gap:2.5rem;align-items:start}
+.about-photo{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);aspect-ratio:3/4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
+.avatar-ring{width:100px;height:100px;border-radius:50%;background:rgba(200,33,58,0.15);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:2.5rem}
+.about-name{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:-0.3px}
+.about-meta{font-size:12px;color:var(--muted);text-align:center}
+.hobby-list{display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem}
+.hobby-item{display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;font-size:14px}
+.hobby-ic{font-size:14px;width:28px;text-align:center}
+.quick-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:3rem 0}
+.qn-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem 1.5rem;text-decoration:none;color:var(--text);transition:all 0.2s;display:block}
+.qn-card:hover{border-color:var(--accent);background:var(--surface2)}
+.qn-icon{font-size:1.8rem;margin-bottom:1rem;display:block}
+.qn-card h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:4px}
+.qn-card p{font-size:13px;color:var(--muted)}
+.qn-arr{font-size:18px;color:var(--accent);margin-top:0.75rem;display:block}
+@media(max-width:680px){.about-grid{grid-template-columns:1fr}.about-photo{display:none}.quick-nav,.stats-row{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="nav-brand" href="index.html"><span class="nav-dot"></span>Ana Kovač</a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Početna</a></li>
+    <li><a href="predmeti.html">Predmeti</a></li>
+    <li><a href="sjwp.html">SJWP</a></li>
+    <li><a href="radovi.html">Radovi</a></li>
+    <li><a href="certifikati.html">Certifikati</a></li>
+    <li><a href="istrazivanje.html">Istraživanje</a></li>
+  </ul>
+</nav>
+<div class="hero">
+  <div class="pw">
+    <div class="hero-eyebrow"><span class="eline"></span>Učenička stranica · 2024./2025.</div>
+    <h1>Pozdrav,<br>ja sam <span class="hl">Ana</span> <span class="dim">Kovač.</span></h1>
+    <p class="hero-sub">Učenica 3. razreda Tehničke škole Zagreb, smjer računarstvo i informatika. Volim programiranje, biologiju i istraživanje novih ideja.</p>
+    <div class="hero-pills">
+      <span class="pill"><span class="pill-dot" style="background:var(--accent)"></span>Tehnička škola Zagreb</span>
+      <span class="pill"><span class="pill-dot" style="background:var(--accent3)"></span>Računarstvo i informatika</span>
+      <span class="pill"><span class="pill-dot" style="background:var(--accent2)"></span>3. razred</span>
+    </div>
+  </div>
+</div>
+<div class="pw">
+  <div class="stats-row">
+    <div class="stat-cell"><div class="num">3<span>.</span></div><div class="lbl">Razred</div></div>
+    <div class="stat-cell"><div class="num">6<span>+</span></div><div class="lbl">Certifikata</div></div>
+    <div class="stat-cell"><div class="num">3</div><div class="lbl">SJWP vježbe</div></div>
+    <div class="stat-cell"><div class="num">78</div><div class="lbl">Ispitanika</div></div>
+  </div>
+  <section class="sec" id="o-meni">
+    <div class="about-grid">
+      <div>
+        <h2 class="st">O meni</h2>
+        <p style="color:var(--muted);font-size:15px;margin-bottom:1.5rem;line-height:1.8">Pohađam Tehničku školu Zagreb gdje studiram računarstvo i informatiku. Zanimaju me sve stvari na razmeđi tehnologije i prirodnih znanosti — od programiranja do biologije. Aktivna sam u školskim aktivnostima i redovito sudjelujem na natjecanjima.</p>
+        <p style="color:var(--muted);font-size:15px;margin-bottom:1.5rem;line-height:1.8">Ovu stranicu izrađujem u sklopu predmeta Školska web stranica — projekt koji mi je dao slobodu izraziti se digitalno i naučiti web razvoj od temelja.</p>
+        <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.75rem">Slobodne aktivnosti</h3>
+        <div class="hobby-list">
+          <div class="hobby-item"><span class="hobby-ic">📚</span>Čitanje — SF i fantasy žanr</div>
+          <div class="hobby-item"><span class="hobby-ic">📸</span>Fotografija prirode i biljaka</div>
+          <div class="hobby-item"><span class="hobby-ic">♟️</span>Šah — školski šahovski klub</div>
+          <div class="hobby-item"><span class="hobby-ic">💻</span>Programiranje u slobodno vrijeme</div>
+          <div class="hobby-item"><span class="hobby-ic">🤝</span>Volontiranje u gradskoj knjižnici</div>
+        </div>
+      </div>
+      <div class="about-photo">
+        <div class="avatar-ring">👩‍🎓</div>
+        <div class="about-name">Ana Kovač</div>
+        <div class="about-meta">Tehnička škola Zagreb<br>3.b razred</div>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+  <section class="sec">
+    <h2 class="st">Istraži stranicu</h2>
+    <div class="quick-nav">
+      <a class="qn-card" href="predmeti.html"><span class="qn-icon">📐</span><h3>Predmeti</h3><p>Materijali i bilješke iz informatike, biologije i matematike</p><span class="qn-arr">→</span></a>
+      <a class="qn-card" href="sjwp.html"><span class="qn-icon">🌐</span><h3>SJWP vježbe</h3><p>Vježbe iz web projektiranja — forme, tablice, priče i više</p><span class="qn-arr">→</span></a>
+      <a class="qn-card" href="radovi.html"><span class="qn-icon">📄</span><h3>Radovi i eseji</h3><p>Seminarski radovi, prezentacije i eseji za školske predmete</p><span class="qn-arr">→</span></a>
+      <a class="qn-card" href="certifikati.html"><span class="qn-icon">🏆</span><h3>Certifikati</h3><p>Izvanškolska postignuća, nagrade i potvrde</p><span class="qn-arr">→</span></a>
+      <a class="qn-card" href="istrazivanje.html"><span class="qn-icon">🔬</span><h3>Istraživanje LV12</h3><p>Analiza utjecaja pametnih telefona na učenje</p><span class="qn-arr">→</span></a>
+      <a class="qn-card" href="sjwp.html#poveznice"><span class="qn-icon">🔗</span><h3>Korisne poveznice</h3><p>Resursi za učenje weba i ostalih predmeta</p><span class="qn-arr">→</span></a>
+    </div>
+  </section>
+</div>
+<footer><p>Ana Kovač · Tehnička škola Zagreb · 2024./2025. · Izrađeno u okviru predmeta <a href="sjwp.html">SJWP</a></p></footer>
+</body>
+</html>

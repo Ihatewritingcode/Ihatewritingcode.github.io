@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ana Kovač — SJWP</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.vjezba{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;margin-bottom:1.5rem}
+.vjezba-num{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:0.5rem}
+.vjezba h3{font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;letter-spacing:-0.3px}
+.vjezba .vdesc{font-size:13px;color:var(--muted);margin-bottom:1.5rem}
+.story-box{background:var(--surface2);border-left:3px solid var(--accent);padding:1.5rem;border-radius:0 10px 10px 0;font-style:italic;font-size:15px;line-height:1.8;color:var(--text);margin-bottom:0.75rem}
+.story-box strong{font-style:normal;color:var(--accent)}
+.vid-box{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;cursor:pointer}
+.play{width:56px;height:56px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:20px;color:#fff}
+.vid-box p{font-size:14px;color:var(--muted)}
+.zapisnik-badge{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;background:rgba(240,165,0,0.12);color:#F0B830;padding:4px 12px;border-radius:30px}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="nav-brand" href="index.html"><span class="nav-dot"></span>Ana Kovač</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Početna</a></li>
+    <li><a href="predmeti.html">Predmeti</a></li>
+    <li><a href="sjwp.html" class="active">SJWP</a></li>
+    <li><a href="radovi.html">Radovi</a></li>
+    <li><a href="certifikati.html">Certifikati</a></li>
+    <li><a href="istrazivanje.html">Istraživanje</a></li>
+  </ul>
+</nav>
+<div class="pw-full">
+  <div class="ph">
+    <div class="eyebrow"><span class="eline"></span>Školska web stranica — projekt</div>
+    <h1 class="page-title">SJWP vježbe</h1>
+    <p class="pdesc">Tri vježbe iz predmeta Školska web stranica — projekt, plus zapisnik radionice LV 13a i korisne poveznice za učenje.</p>
+  </div>
+
+  <div class="vjezba">
+    <div class="vjezba-num">Vježba 01 — HTML obrazac</div>
+    <h3>Kontakt forma</h3>
+    <p class="vdesc">Renderiran HTML obrazac s različitim vrstama input polja — text, email, select i textarea.</p>
+    <div class="g2">
+      <div class="form-field"><label>Ime i prezime</label><input type="text" placeholder="Unesite ime i prezime"></div>
+      <div class="form-field"><label>E-mail adresa</label><input type="email" placeholder="vase@email.hr"></div>
+    </div>
+    <div class="form-field"><label>Predmet</label><select><option>Odaberite predmet...</option><option>Informatika</option><option>Biologija</option><option>Matematika</option><option>SJWP</option></select></div>
+    <div class="form-field"><label>Poruka</label><textarea placeholder="Napišite poruku..."></textarea></div>
+    <button class="btn-primary" onclick="alert('Hvala! Poruka je poslana.')">Pošalji poruku</button>
+  </div>
+
+  <div class="vjezba">
+    <div class="vjezba-num">Vježba 02 — HTML priča</div>
+    <h3>Kratka priča s HTML formatiranjem</h3>
+    <p class="vdesc">Tekst oblikovan HTML elementima: strong, em, paragrafi i citat u blockquote stilu.</p>
+    <div class="story-box">
+      "Jednog jutra Lena je otvorila laptop i ugledala poruku: <strong>Hello, World!</strong>. Nije znala da će taj trenutak promijeniti sve.<br><br>
+      Počela je učiti programirati, <em>red po red, bug po bug</em> — i shvatila da jezik koda nije drugačiji od bilo kojeg drugog: treba strpljenja, prakse i malo hrabrosti.<br><br>
+      Godinu dana kasnije, pokrenula je svoju prvu web stranicu. Nije bila savršena, ali bila je <strong>njezina</strong>."
+    </div>
+    <p style="font-size:12px;color:var(--muted)">Priča koristi HTML elemente: strong, em, br i div s lijevom bordurom</p>
+  </div>
+
+  <div class="vjezba">
+    <div class="vjezba-num">Vježba 03 — Video element</div>
+    <h3>Ugrađeni video sadržaj</h3>
+    <p class="vdesc">Primjer HTML video elementa i iframe ugradnje YouTube sadržaja na web stranicu.</p>
+    <div class="vid-box">
+      <div class="play">▶</div>
+      <p>Uvod u web razvoj — HTML i CSS osnove</p>
+      <p style="font-size:12px">Zamijeniti s: &lt;iframe src="https://youtube.com/embed/ID"&gt;</p>
+    </div>
+  </div>
+
+  <div class="divider" id="zapisnik"></div>
+
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.5rem">
+    <h2 class="st" style="margin:0">Zapisnik radionice — LV 13a</h2>
+    <span class="zapisnik-badge">Radionica</span>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:3rem">
+    <table class="dt">
+      <tbody>
+        <tr><td style="color:var(--muted);width:200px">Datum</td><td><strong>15. studenog 2024.</strong></td></tr>
+        <tr><td style="color:var(--muted)">Voditeljica</td><td>Prof. Marija Horvat</td></tr>
+        <tr><td style="color:var(--muted)">Tema radionice</td><td>Izrada osobne web stranice u WordPressu</td></tr>
+        <tr><td style="color:var(--muted)">Naučene vještine</td><td>Instalacija WP teme, kreiranje stranica, dodavanje sadržaja blokovima</td></tr>
+        <tr><td style="color:var(--muted)">Domaća zadaća</td><td>Objava prvog posta s kratkim tekstom o sebi</td></tr>
+        <tr><td style="color:var(--muted)">Sljedeći susret</td><td>29. studenog — dizajn, prilagodba teme i CSS</td></tr>
+        <tr><td style="color:var(--muted)">Napomena</td><td>Svi učenici moraju imati WordPress.org korisnički račun i lokalnu instalaciju</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="divider" id="poveznice"></div>
+
+  <h2 class="st">SJWP — učenje weba</h2>
+  <a class="link-row" href="https://developer.mozilla.org/hr/" target="_blank"><span class="lr-ic">📘</span><div><div>MDN Web Docs</div><div class="lr-sub">Kompletna HTML, CSS i JavaScript referenca</div></div><span class="lr-arr">↗</span></a>
+  <a class="link-row" href="https://www.w3schools.com" target="_blank"><span class="lr-ic">🎓</span><div><div>W3Schools</div><div class="lr-sub">Interaktivni web tutoriali za početnike</div></div><span class="lr-arr">↗</span></a>
+  <a class="link-row" href="https://css-tricks.com" target="_blank"><span class="lr-ic">🎨</span><div><div>CSS-Tricks</div><div class="lr-sub">Savjeti, trikovi i primjeri za CSS</div></div><span class="lr-arr">↗</span></a>
+  <a class="link-row" href="https://codepen.io" target="_blank"><span class="lr-ic">✏️</span><div><div>CodePen</div><div class="lr-sub">Online editor za HTML/CSS/JS vježbe</div></div><span class="lr-arr">↗</span></a>
+  <a class="link-row" href="https://web.dev" target="_blank"><span class="lr-ic">🌐</span><div><div>web.dev</div><div class="lr-sub">Moderna web praksa od Google tima</div></div><span class="lr-arr">↗</span></a>
+
+  <h2 class="st" style="margin-top:2.5rem">Ostali predmeti i alati</h2>
+  <a class="link-row" href="https://www.khanacademy.org" target="_blank"><span class="lr-ic">📐</span><div><div>Khan Academy</div><div class="lr-sub">Besplatni tečajevi iz matematike i biologije</div></div><span class="lr-arr">↗</span></a>
+  <a class="link-row" href="https://www.geogebra.org" target="_blank"><span class="lr-ic">📊</span><div><div>GeoGebra</div><div class="lr-sub">Matematički grafikoni i geometrija</div></div><span class="lr-arr">↗</span></a>
+  <a class="link-row" href="https://learn.microsoft.com" target="_blank"><span class="lr-ic">💻</span><div><div>Microsoft Learn</div><div class="lr-sub">IT certifikati i besplatni tečajevi</div></div><span class="lr-arr">↗</span></a>
+  <a class="link-row" href="https://www.britannica.com" target="_blank"><span class="lr-ic">🔬</span><div><div>Britannica</div><div class="lr-sub">Enciklopedija — biologija i prirodne znanosti</div></div><span class="lr-arr">↗</span></a>
+  <a class="link-row" href="https://edu.google.com" target="_blank"><span class="lr-ic">🎒</span><div><div>Google for Education</div><div class="lr-sub">Alati i resursi za učenje i suradnju</div></div><span class="lr-arr">↗</span></a>
+</div>
+<footer><p>Ana Kovač · Tehnička škola Zagreb · 2024./2025. · <a href="sjwp.html">SJWP</a></p></footer>
+</body>
+</html>

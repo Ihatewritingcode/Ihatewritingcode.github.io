@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* ── TOKENS ─────────────────────────────────── */
+:root {
+  --bg:       #0D0608;
+  --surface:  #130A0C;
+  --surface2: #1A0E10;
+  --surface3: #221317;
+  --accent:   #C8213A;
+  --accent-h: #E03050;
+  --accent2:  #F0A500;
+  --accent3:  #3ECFB2;
+  --text:     #F5EDEF;
+  --muted:    #8A7278;
+  --border:   rgba(200,33,58,0.14);
+  --border2:  rgba(200,33,58,0.28);
+  --radius:   14px;
+  --radius-sm: 8px;
+}
+
+/* ── RESET ───────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Instrument Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ── NAVIGATION ──────────────────────────────── */
+.topnav {
+  background: rgba(13,6,8,0.93);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.nav-brand {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 30px;
+  transition: all 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text);
+  background: var(--surface3);
+}
+
+/* ── PAGE WRAPPER ────────────────────────────── */
+.pw { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+.pw-full { max-width: 1000px; margin: 0 auto; padding: 3rem 2rem 6rem; }
+
+/* ── PAGE HERO STRIP ─────────────────────────── */
+.ph {
+  margin-bottom: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.eline { width: 24px; height: 1.5px; background: var(--accent); }
+
+h1.page-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 0.75rem;
+}
+
+.pdesc {
+  font-size: 15px;
+  color: var(--muted);
+  max-width: 540px;
+  line-height: 1.7;
+}
+
+/* ── SECTION HEADINGS ────────────────────────── */
+h2.st {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  margin-bottom: 1.25rem;
+}
+
+/* ── CARDS ───────────────────────────────────── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.card:hover { border-color: var(--border2); }
+
+.card h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.3px;
+}
+
+.card p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+/* ── TAGS / BADGES ───────────────────────────── */
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 30px;
+  margin-bottom: 0.75rem;
+}
+
+.tag-red    { background: rgba(200,33,58,0.14);  color: #E5687A; }
+.tag-amber  { background: rgba(240,165,0,0.12);  color: #F0B830; }
+.tag-teal   { background: rgba(62,207,178,0.12); color: #3ECFB2; }
+.tag-gray   { background: rgba(200,33,58,0.07);  color: var(--muted); }
+
+/* ── GRIDS ───────────────────────────────────── */
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.g3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+
+/* ── DIVIDER ─────────────────────────────────── */
+.divider { height: 1px; background: var(--border); margin: 2.5rem 0; }
+
+/* ── LINK ROWS ───────────────────────────────── */
+.link-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  margin-bottom: 8px;
+}
+
+.link-row:hover { border-color: var(--accent); background: var(--surface2); }
+.lr-ic { width: 32px; height: 32px; border-radius: 8px; background: var(--surface3); display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+.lr-sub { font-size: 12px; color: var(--muted); font-weight: 400; }
+.lr-arr { margin-left: auto; color: var(--muted); }
+
+/* ── TABLES ──────────────────────────────────── */
+table.dt { width: 100%; border-collapse: collapse; font-size: 14px; }
+table.dt th {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface2);
+}
+table.dt td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--text); }
+table.dt tr:last-child td { border-bottom: none; }
+table.dt tr:hover td { background: var(--surface2); }
+
+/* ── TABS ────────────────────────────────────── */
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 8px 0;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn.on { background: var(--surface3); color: var(--text); }
+.tab-pane { display: none; }
+.tab-pane.on { display: block; }
+
+/* ── FORM FIELDS ─────────────────────────────── */
+.form-field { margin-bottom: 1.25rem; }
+
+.form-field label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 7px;
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  width: 100%;
+  padding: 11px 16px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 15px;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus { border-color: var(--accent); }
+.form-field textarea { resize: vertical; min-height: 110px; }
+.form-field select option { background: var(--surface2); }
+
+/* ── BUTTONS ─────────────────────────────────── */
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 11px 28px;
+  border-radius: var(--radius-sm);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover { background: var(--accent-h); }
+
+.dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 11px 24px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background 0.2s;
+  margin-top: 2rem;
+}
+
+.dl-btn:hover { background: var(--accent-h); }
+
+.dl-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0.75rem;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+.dl-link:hover { color: var(--accent-h); }
+
+/* ── LIST ITEMS ──────────────────────────────── */
+.list-card {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ldot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+/* ── FILTER BUTTONS ──────────────────────────── */
+.filters { display: flex; gap: 8px; margin-bottom: 1.5rem; flex-wrap: wrap; }
+
+.filter-btn {
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Instrument Sans', sans-serif;
+}
+
+.filter-btn:hover,
+.filter-btn.on { background: var(--surface); color: var(--text); border-color: var(--border2); }
+
+/* ── BAR CHART ───────────────────────────────── */
+.bar-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.bar-label { font-size: 13px; color: var(--muted); min-width: 130px; }
+.bar-bg { flex: 1; background: var(--surface2); border-radius: 4px; height: 8px; overflow: hidden; }
+.bar-fill { height: 8px; border-radius: 4px; background: var(--accent); }
+.bar-val { font-size: 13px; font-weight: 600; color: var(--text); min-width: 36px; text-align: right; }
+
+/* ── FOOTER ──────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+footer a { color: var(--accent); text-decoration: none; }
+footer a:hover { color: var(--accent-h); }
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 680px) {
+  .g2, .g3 { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .pw, .pw-full { padding: 2rem 1.25rem 4rem; }
+}
