@@ -1,32 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Moja školska stranica</title>
-    <link href="./stil.css" type="text/css" rel="stylesheet">
+    <title>Moja moderna stranica</title>
+    <link rel="stylesheet" href="stil.css">
+    <script src="script.js"></script>
 </head>
-<body>
 
-<header>
-    <h1>Dobrodošli na moju web stranicu</h1>
-</header>
+<body onload="pozdrav()">
 
 <nav>
-    <a href="index.html">Početna</a>
-    <a href="osobno.html">O meni</a>
-    <a href="predmeti.html">Predmeti</a>
-    <a href="vježbe.html">SJWP vježbe</a>
-    <a href="radovi.html">Radovi</a>
-    <a href="istr.html">Istraživanje</a>
-    <a href="certifikati.html">Certifikati</a>
+    <a href="#o-meni">O meni</a>
+    <a href="#predmeti">Predmeti</a>
+    <a href="#vjezbe">SJWP</a>
+    <a href="#radovi">Radovi</a>
+    <a href="#istrazivanje">Istraživanje</a>
+    <a href="#certifikati">Certifikati</a>
 </nav>
 
-<section>
-    <h2>Opis stranice</h2>
-    <p>Ova stranica sadrži moje školske radove, vježbe iz SJWP i korisne materijale za učenje.</p>
-</section>
+<div class="hero">
+    <h1>Moja školska web stranica</h1>
+    <p>Portfolio radova i vježbi</p>
+</div>
+
+<!-- O MENI -->
+<div class="section" id="o-meni">
+    <h2>O meni</h2>
+    <p>Zovem se [Ime] i volim programiranje, sport i tehnologiju.</p>
+
+    <ul>
+        <li>Programiranje</li>
+        <li>Gaming</li>
+        <li>Sport</li>
+    </ul>
+</div>
+
+<!-- PREDMETI -->
+<div class="section" id="predmeti">
+    <h2>Predmeti</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Informatika (SJWP)</h3>
+            <a href="https://www.w3schools.com/">W3Schools</a><br>
+            <a href="https://developer.mozilla.org/">MDN</a>
+        </div>
+
+        <div class="card">
+            <h3>Matematika</h3>
+            <a href="https://www.khanacademy.org/">Khan Academy</a>
+        </div>
+    </div>
+</div>
+
+<!-- SJWP VJEŽBE -->
+<div class="section" id="vjezbe">
+    <h2>SJWP vježbe</h2>
+
+    <h3>Tablica (raspored)</h3>
+    <table>
+        <tr><th>Dan</th><th>Predmet</th></tr>
+        <tr><td>Ponedjeljak</td><td>Matematika</td></tr>
+        <tr><td>Utorak</td><td>Informatika</td></tr>
+    </table>
+
+    <h3>Forma</h3>
+    <form>
+        <input type="text" placeholder="Ime">
+        <textarea placeholder="Poruka"></textarea>
+        <button>Pošalji</button>
+    </form>
+
+    <h3>Video</h3>
+    <iframe width="300" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+</div>
+
+<!-- RADOVI -->
+<div class="section" id="radovi">
+    <h2>Radovi</h2>
+
+    <div class="cards">
+        <div class="card">Seminarski rad – AI</div>
+        <div class="card">Esej – tehnologija</div>
+        <div class="card">Prezentacija – HTML</div>
+        <div class="card">LV13a zapisnik</div>
+    </div>
+</div>
+
+<!-- ISTRAŽIVANJE -->
+<div class="section" id="istrazivanje">
+    <h2>Istraživanje (LV12)</h2>
+    <p>Istraživanje o internetu među učenicima:</p>
+
+    <ul>
+        <li>80% koristi internet svaki dan</li>
+        <li>Najviše za društvene mreže</li>
+    </ul>
+</div>
+
+<!-- CERTIFIKATI -->
+<div class="section" id="certifikati">
+    <h2>Certifikati</h2>
+
+    <div class="cards">
+        <div class="card">Python certifikat</div>
+        <div class="card">Natjecanje iz informatike</div>
+    </div>
+</div>
 
 <footer>
-    <p>© 2026 Moje ime</p>
+    <p>© 2026 Moj portfolio</p>
 </footer>
 
 </body>
