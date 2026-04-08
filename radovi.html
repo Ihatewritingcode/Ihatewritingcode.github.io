@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ana Kovač — Radovi</title>
+<title>Arsen Pshevlotskyi — Radovi</title>
 <link rel="stylesheet" href="style.css">
 <style>
 .rad-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;margin-bottom:1rem;display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:start;transition:border-color 0.2s}
@@ -19,7 +19,7 @@
 </head>
 <body>
 <nav class="topnav">
-  <a class="nav-brand" href="index.html"><span class="nav-dot"></span>Ana Kovač</a>
+  <a class="nav-brand" href="index.html"><span class="nav-dot"></span>Arsen Pshevlotskyi</a>
   <ul class="nav-links">
     <li><a href="index.html">Početna</a></li>
     <li><a href="predmeti.html">Predmeti</a></li>
@@ -37,10 +37,7 @@
   </div>
   <div class="filters">
     <button class="filter-btn on" onclick="filter(this,'sve')">Sve</button>
-    <button class="filter-btn" onclick="filter(this,'sem')">Seminarski</button>
-    <button class="filter-btn" onclick="filter(this,'esej')">Eseji</button>
-    <button class="filter-btn" onclick="filter(this,'prez')">Prezentacije</button>
-    <button class="filter-btn" onclick="filter(this,'ist')">Istraživanje</button>
+
   </div>
   <div id="radovi-list">
     <div class="rad-card" data-type="sem">
@@ -65,7 +62,7 @@
     </div>
   </div>
 </div>
-<footer><p>Ana Kovač · Tehnička škola Zagreb · 2024./2025. · <a href="sjwp.html">SJWP</a></p></footer>
+<footer><p>Arsen Pshevlotskyi · Tehnička škola Ruđera Boškovića · 2025./2026. · <a href="sjwp.html">SJWP</a></p></footer>
 <script>
 function filter(btn,type){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');document.querySelectorAll('.rad-card').forEach(c=>{c.style.display=(type==='sve'||c.dataset.type===type)?'':'none'})}
 </script>
