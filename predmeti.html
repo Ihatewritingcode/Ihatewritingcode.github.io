@@ -38,7 +38,7 @@ tr:hover td{background:var(--surface2)}
   </div>
   <div class="tabs">
     <button class="tab-btn on" onclick="sw(this,'inf')">🎬 Multimedija</button>
-    <button class="tab-btn" onclick="sw(this,'mat')">💻 Računalne Mreže</button>
+    <button class="tab-btn" onclick="sw(this,'rm')">💻 Računalne Mreže</button>
   </div>
   <div id="inf" class="tab-pane on">
   <div class="card">
@@ -66,12 +66,14 @@ tr:hover td{background:var(--surface2)}
       <table>
         <thead><tr><th>Sat</th><th>Ponedjeljak</th><th>Utorak</th><th>Srijeda</th><th>Četvrtak</th><th>Petak</th></tr></thead>
         <tbody>
-          <tr><td><strong>1.</strong></td><td>Matematika</td><td>Informatika</td><td>Engleski</td><td>Biologija</td><td>Fizika</td></tr>
-          <tr><td><strong>2.</strong></td><td>Matematika</td><td>Informatika</td><td>Engleski</td><td>Biologija</td><td>Fizika</td></tr>
-          <tr><td><strong>3.</strong></td><td>Hrvatski</td><td>Fizika</td><td>Matematika</td><td>Informatika</td><td>Tjelesni</td></tr>
-          <tr><td><strong>4.</strong></td><td>Hrvatski</td><td>Fizika</td><td>Matematika</td><td>Informatika</td><td>Tjelesni</td></tr>
-          <tr><td><strong>5.</strong></td><td>Biologija</td><td>Vjeronauk</td><td>SJWP</td><td>Historia</td><td>—</td></tr>
-          <tr><td><strong>6.</strong></td><td>—</td><td>—</td><td>SJWP</td><td>—</td><td>—</td></tr>
+          <tr><td><strong>1.</strong></td><td>DIOIS</td><td>NIOP</td><td>Engleski</td><td>Građa Računala</td><td>Fizika</td></tr>
+          <tr><td><strong>2.</strong></td><td>DIOIS</td><td>NIOP</td><td>Matematika</td><td>Građa Računala</td><td>Fizika</td></tr>
+          <tr><td><strong>3.</strong></td><td>Mikroupravljače</td><td>Hrvatski</td><td>Fizika</td><td>Građa Računala</td><td>Engleski</td></tr>
+          <tr><td><strong>4.</strong></td><td>Mikroupravljače</td><td>Vježbe iz Matematike</td><td>Tjelesni</td><td>Dizajn Baze Podataka</td><td>Hrvatski</td></tr>
+          <tr><td><strong>5.</strong></td><td>Računalne Mreže</td><td>DIOIS</td><td>Tjelesni</td><td>Dizajn Baze Podataka</td><td>Sat Razrednika</td></tr>
+          <tr><td><strong>6.</strong></td><td>Računalne Mreže</td><td>DIOIS</td><td>Operacijski sustavi</td><td>Hrvatski</td><td>Matematika</td></tr>
+          <tr><td><strong>7.</strong></td><td>Matematika</td><td>—</td><td>SJWP</td><td>Operacijski sustavi</td><td>Multimedija</td></tr>
+          <tr><td><strong>8.</strong></td><td>Etika</td><td>—</td><td>SJWP</td><td>Engleski</td><td>Multimedija</td></tr>
         </tbody>
       </table>
     </div>
@@ -83,13 +85,13 @@ tr:hover td{background:var(--surface2)}
     <div class="list-card"><span class="ldot"></span>Repetirati SQL za pisani ispit</div>
     <div class="list-card"><span class="ldot"></span>Volontiranje u knjižnici — subota 10:00</div>
   </div>
-  <div id="mat" class="tab-pane">
-    <div class="card"><span class="tag tag-amber">Matematika · Bilješke</span><h3>Statistika i vjerojatnost</h3><p>Deskriptivna statistika, mjere raspršenosti, normalne razdiobe, kombinatorika i osnove teorije vjerojatnosti. Koristimo GeoGebru za vizualizaciju.</p></div>
-    <div class="card"><span class="tag tag-amber">Matematika · Bilješke</span><h3>Analitička geometrija</h3><p>Koordinatni sustav u ravnini i prostoru, jednadžbe pravca, kružnice i koničnih presjeka. Vektori u ravnini i prostoru, skalarni i vektorski produkt.</p></div>
-    <div class="card"><span class="tag tag-amber">Matematika · Prezentacija</span><h3>Primjena statistike u biologiji</h3><p>Prezentacija o primjeni statistike u biološkim istraživanjima — od Mendelovih pokusa do modernih epidemioloških studija.</p><a class="dl-link" href="#">↓ Preuzmi prezentaciju</a></div>
+  <div id="rm" class="tab-pane">
+    <div class="card"><span class="tag tag-amber">Računalne Mreže · Vježba</span><h3>Statistika i vjerojatnost</h3><p>Deskriptivna statistika, mjere raspršenosti, normalne razdiobe, kombinatorika i osnove teorije vjerojatnosti. Koristimo GeoGebru za vizualizaciju.</p></div>
+    <div class="card"><span class="tag tag-amber">Računalne Mreže · Vježba</span><h3>Analitička geometrija</h3><p>Koordinatni sustav u ravnini i prostoru, jednadžbe pravca, kružnice i koničnih presjeka. Vektori u ravnini i prostoru, skalarni i vektorski produkt.</p></div>
+    <div class="card"><span class="tag tag-amber">Računalne Mreže · Vježba</span><h3>Primjena statistike u biologiji</h3><p>Prezentacija o primjeni statistike u biološkim istraživanjima — od Mendelovih pokusa do modernih epidemioloških studija.</p><a class="dl-link" href="#">↓ Preuzmi prezentaciju</a></div>
   </div>
 </div>
-<footer><p>Ana Kovač · Tehnička škola Zagreb · 2024./2025. · <a href="sjwp.html">SJWP</a></p></footer>
+<footer><p>Arsen Pshevlotskyi · Tehnička škola Ruđera Boškovića · 2025./2026. · <a href="sjwp.html">SJWP</a></p></footer>
 <script>
 function sw(btn,id){document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('on'));document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('on'));btn.classList.add('on');document.getElementById(id).classList.add('on')}
 </script>
